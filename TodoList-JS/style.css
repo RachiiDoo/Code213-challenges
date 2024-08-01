@@ -1,0 +1,27 @@
+.container {
+  background-color: #c78a8a98;
+}
+
+.yellowColor {
+  background-color: #fff4e0;
+}
+
+.orangeColor {
+  background-color: #ffbf9b;
+}
+
+.deleteButtonColor {
+  background-color: #da373d;
+}
+
+.editButtonColor {
+  background-color: #4848b3;
+}
+
+.titleColor {
+  background-color: #4d4d4d;
+}
+
+body {
+  background-color: #c78a8a98;
+}

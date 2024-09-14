@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+<h1>Add New Product</h1>
+<form action="/books/add" method="POST">
+  <% if (errors && errors.length > 0) { %> <% errors.forEach(function(error) {
+  %>
+  <div class="error_msg"><%= error.msg %></div>
+  <% }); %> <% } %>
+  <div>
+    <label>Title</label>
+    <input
+      type="text"
+      name="title"
+      value="<%= typeof title !== 'undefined' ? title : '' %>"
+    />
+  </div>
+  <div>
+    <label>Description</label>
+    <textarea name="description">
+<%= typeof description !== 'undefined' ? description : '' %></textarea
+    >
+  </div>
+  <div>
+    <label>Price</label>
+    <input
+      type="number"
+      name="price"
+      step="0.01"
+      value="<%= typeof price !== 'undefined' ? price : '' %>"
+    />
+  </div>
+  <div>
+    <label>Image URL</label>
+    <input
+      type="text"
+      name="image"
+      value="<%= typeof image !== 'undefined' ? image : '' %>"
+    />
+  </div>
+  <button type="submit">Add Product</button>
+</form>
+
+<%- include('partials/footer') %>

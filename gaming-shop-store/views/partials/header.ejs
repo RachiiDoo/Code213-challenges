@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gaming Shop</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/books/shop">Shop</a></li>
+        <% if (user) { %>
+        <li><a href="/books/add">Add Product</a></li>
+        <li><a href="/users/logout">Logout</a></li>
+        <% } else { %>
+        <li><a href="/users/login">Login</a></li>
+        <li><a href="/users/register">Register</a></li>
+        <% } %>
+      </ul>
+    </nav>
+    <% if (success_msg) { %>
+    <div class="success_msg"><%= success_msg %></div>
+    <% } %> <% if (error_msg) { %>
+    <div class="error_msg"><%= error_msg %></div>
+    <% } %> <% if (error) { %>
+    <div class="error_msg"><%= error %></div>
+    <% } %>
+  </body>
+</html>

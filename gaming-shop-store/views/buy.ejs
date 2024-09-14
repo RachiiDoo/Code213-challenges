@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+
+<h1>Buy Book</h1>
+<div class="book-detail">
+  <h2><%= book.title %></h2>
+  <p><%= book.description %></p>
+  <p>Price: $<%= book.price %></p>
+  <% if (book.image) { %>
+  <img src="<%= book.image %>" alt="<%= book.title %>" />
+  <% } %>
+  <form action="/books/buy/<%= book._id %>" method="POST">
+    <button type="submit">Confirm Purchase</button>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

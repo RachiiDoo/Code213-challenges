@@ -1,0 +1,14 @@
+[Employees] --(works at)--> [Krusty Krab]
+    |                                 |
+    |                                 |
+    |                                 |
+    v                                 v
+[Serves] --(serves)--> [Customers]
+
+[Menu Items] --(available at)--> [Krusty Krab]
+
+[Orders] --(placed by)--> [Customers]
+    |
+    |
+    v
+[Menu Items] --(included in)--> [Orders]
